@@ -1,0 +1,6 @@
+{
+  "generator-sp": {
+    "capprojectname": "gl-project",
+    "csspreprocessor": "scss"
+  }
+}
