@@ -8,6 +8,7 @@ define (require, exports, module)->
   Page = require 'view/page'
   Widget = require 'view/widget'
   cookies = require 'cookies'
+  backgroundImage = require 'utils/backgroundImage'
   # require 'utils/jqueryPatch'  # uncomment if You need touch-click support
   #GAConstructor = require 'sp-utils-gaconstructor'
   #UserModel = require 'model/UserModel'
@@ -24,6 +25,26 @@ define (require, exports, module)->
     if settings.type != 'GET'
       jqxhr.setRequestHeader 'X-CSRF-Token', cookies.get('CSRF-Token')
 
+  Backbone.Epoxy.binding.addHandler 'background_image',{
+    set:($el, url)->
+      backgroundImage $el, url
+  }
+
+  Backbone.Epoxy.binding.addHandler "href",{
+    set:($el, url="")->
+      options = {target:null}
+
+      if /^http[s]?:\/\//.test url
+        options.href = url
+        options.target = "_blank"
+        options["data-link"] = ""
+      else if Modernizr.history
+        options.href = if url[0] is "#" then url[1..] else url
+      else
+        options.href = if url[0] isnt "#" then "#" + url else url
+
+      $el.attr options
+  }
 
   class Application
     constructor: (common)->

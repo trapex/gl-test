@@ -1,0 +1,13 @@
+@mixin fontme ($fontName, $fileName, $svgId){
+  @font-face {
+    font-family: $fontName;
+    src: url('/styles/fonts/#{$fileName}.eot');
+    src: url('/styles/fonts/#{$fileName}.eot?iefix') format("embedded-opentype"),
+      url('/styles/fonts/#{$fileName}.svg##{$svgId}') format('svg'),
+      url('/styles/fonts/#{$fileName}.woff') format('woff'),
+      url('/styles/fonts/#{$fileName}.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-smoothing: antialiased;
+  }
+}
