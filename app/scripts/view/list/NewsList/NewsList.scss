@@ -1,20 +1,6 @@
 .b-news{
 	&--more-btn {
-		width: 150px;
-		height: 40px;
-		line-height: 40px;
-		margin: 20px 0 0 30px;
-		border-radius: 3px;
-		background-color: #000;
-		color: #fff;
-		text-align: center;
-		font-family: Arimo;
-		cursor: pointer;
-		transition: opacity 1s ease-out 0;
-		&:hover {
-			opacity: 0.8;
-			transition: opacity 1s ease-out 0;
-		}
+		@include btn-style(150px, 40px);
 		&.hidden {
 			display: none;
 		}

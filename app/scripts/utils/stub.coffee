@@ -151,6 +151,17 @@ define (require, exports, module) ->
     }
   ]
 
+  stub.feedback_success = {
+    success: true
+    msg: 'Сообщение отправлено, в ближайшее время наш менеджер свяжется с Вами.'
+  }
 
+  stub.feedback_fail = {
+    success: false
+    field: {
+      name: 'email'
+      error: 'Введенный Вами e-mail не найден.'
+    }
+  }
 
   stub

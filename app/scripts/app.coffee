@@ -21,27 +21,39 @@ define (require, exports, module)->
     #https://github.com/lexich/simple-blocks
   ]
 
+  _validate = (view, attr, prop, error = '') ->
+    name = if view._inputValidationName? then view._inputValidationName attr else attr
+    $el = view.$el.find("[#{prop}='#{name}']")
+    if !!error
+      $el.addClass 'invalid'
+    else
+      $el.removeClass 'invalid'
+
+  _.extend Backbone.Validation.callbacks,
+    valid: (view, attr, selector) -> _validate view, attr, selector
+    invalid: (view, attr, error, selector) -> _validate view, attr, selector, error
+
   $(document).ajaxSend (event, jqxhr, settings)->
     if settings.type != 'GET'
       jqxhr.setRequestHeader 'X-CSRF-Token', cookies.get('CSRF-Token')
 
-  Backbone.Epoxy.binding.addHandler 'background_image',{
-    set:($el, url)->
+  Backbone.Epoxy.binding.addHandler 'background_image', {
+    set: ($el, url)->
       backgroundImage $el, url
   }
 
-  Backbone.Epoxy.binding.addHandler "href",{
-    set:($el, url="")->
-      options = {target:null}
+  Backbone.Epoxy.binding.addHandler 'href', {
+    set: ($el, url='') ->
+      options = {target: null}
 
       if /^http[s]?:\/\//.test url
         options.href = url
-        options.target = "_blank"
-        options["data-link"] = ""
+        options.target = '_blank'
+        options['data-link'] = ''
       else if Modernizr.history
-        options.href = if url[0] is "#" then url[1..] else url
+        options.href = if url[0] is '#' then url[1..] else url
       else
-        options.href = if url[0] isnt "#" then "#" + url else url
+        options.href = if url[0] isnt '#' then '#' + url else url
 
       $el.attr options
   }
@@ -78,16 +90,16 @@ define (require, exports, module)->
         item.showCurrent()
         this[key] = item
       Backbone.history.start {
-       pushState: Modernizr.history
+        pushState: Modernizr.history
       }
 
     initPushstateLinks: ->
       selector = "a:not([data-link]):not([href^='javascript:'])"
-      @$document.on "click", selector, (evt)->
-        $(".dropdown.open").removeClass("open")
-        return if !!$(this).parents(".pluso-box").length
-        href = $(this).attr("href") or ""
-        protocol = @protocol + "//"
+      @$document.on 'click', selector, (evt)->
+        $('.dropdown.open').removeClass('open')
+        return if !!$(this).parents('.pluso-box').length
+        href = $(this).attr('href') or ''
+        protocol = @protocol + '//'
         if href.slice(0, protocol.length) isnt protocol
           evt.preventDefault()
           common.router.navigate href, true

@@ -10,11 +10,25 @@
     right: auto;
     bottom: auto;
     z-index: 101;
+    background-color: rgba(0, 0, 0, .7);
   }
   .modal-header{
-    text-align: center;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 40px;
     .close{
-      float: right;
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      outline: none;
+      font-size: 40px;
+      cursor: pointer;
+      transition: all .8s ease-out 0s;
+      &:hover {
+        transition: all .8s ease-out 0s;
+        transform: rotate(180deg);
+      }
     }
   }
 
@@ -22,8 +36,8 @@
     background: white;
     display: table;
     position: relative;
-    min-width: 60%;
-    margin: 10px auto;
+    width: 500px;
+    top: 50%;
   }
   .modal-content {
     position: relative;
@@ -47,4 +61,5 @@
 .modal-backdrop.in{
   opacity: 0.9;
   z-index: 100;
+  background-color: #000;
 }

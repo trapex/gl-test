@@ -1,0 +1,67 @@
+#modal-layout {
+  .feedback_modal {
+    .modal-dialog {
+      height: 340px;
+      margin: -170px auto 0 auto;
+    }
+  }
+}
+.feedback_modal {
+  //.modal{}
+  //.modal-dialog{}
+  //.modal-content{}
+  .b-feedback-form {
+    width: 320px;
+    margin: 0 auto;
+  }
+  .b-el {
+    margin: 10px 0;
+    &--text {
+      width: 100px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &--input {
+      width: 160px;
+      height: 30px;
+      border-radius: 3px;
+      outline: none;
+      border: 1px solid $c-main;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 20px;
+      &.invalid {
+        border: 1px solid $c-red;
+      }
+    }
+  }
+  .b-area {
+    &--text {
+      width: 100px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &--area {
+      resize: none;
+      width: 160px;
+      height: 60px;
+      border-radius: 3px;
+      outline: none;
+      border: 1px solid $c-main;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 10px 20px;
+      &.invalid {
+        border: 1px solid $c-red;
+      }
+    }
+  }
+  .b-feedback-send {
+    @include btn-style(150px, 40px);
+    margin: 30px auto 0 auto;
+    &.lock {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}

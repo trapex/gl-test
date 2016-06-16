@@ -1,0 +1,21 @@
+//- .feedback_modal
+extends ../Modal/_Modal
+
+block header
+  button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+block body
+  .b-feedback-form
+    .b-feedback-form--name.b-el
+      .b-el--text Имя
+      input.b-el--input(data-js-name name='name')
+    .b-feedback-form--phone.b-el
+      .b-el--text Телефон
+      input.b-el--input(data-js-phone name='phone')
+    .b-feedback-form--email.b-el
+      .b-el--text Email
+      input.b-el--input(data-js-email name='email')
+    .b-feedback-form--text.b-area
+      .b-area--text Текст
+      textarea.b-area--area(data-js-text name='text')
+  .b-feedback-send.lock(data-js-send-btn) Отправить
+//-block footer

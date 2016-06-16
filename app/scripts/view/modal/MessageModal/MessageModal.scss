@@ -1,0 +1,15 @@
+#modal-layout {
+  .message_modal{
+  //.modal{}
+    .modal-dialog {
+      height: 200px;
+      margin: -100px auto 0 auto;
+    }
+    .b-text {
+      width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  //.modal-content{}
+}

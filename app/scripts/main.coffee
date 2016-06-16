@@ -31,6 +31,9 @@ require.config
     'bootstrap/tab': "#{VENDOR_PATH}/bootstrap-sass-official/assets/javascripts/bootstrap/tab"
     'bootstrap/tooltip': "#{VENDOR_PATH}/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip"
     'bootstrap/transition': "#{VENDOR_PATH}/bootstrap-sass-official/assets/javascripts/bootstrap/transition"
+    backboneValidation: "#{VENDOR_PATH}/backbone.validation/dist/backbone-validation-amd"
+    jqueryMaskedinput: "#{VENDOR_PATH}/jquery.maskedinput/src/jquery.maskedinput"
+
   packages: [
     'view/layout'
     'view/widget'
@@ -46,6 +49,8 @@ require.config
       deps: ['jquery']
     _imagepreload:
       exports: 'PRELOADER'
+    jqueryMaskedinput:
+      deps: ['jquery']
 
 require ['app', 'common'], (App, common) ->
   common.app = new App common

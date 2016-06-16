@@ -7,14 +7,23 @@ define ['sp-utils-serverclient', 'utils/stub'], (ServerClient, stub)->
     get_data: ->
       @get {
         url: '/api'
-        stub: (async)->
+        stub: (async) ->
           async.resolve 'stub data'
-    	}
+      }
 
     get_news: (data) ->
-    	@get {
+      @get {
         url: '/api'
         data
-        stub: (async)->
+        stub: (async) ->
           async.resolve stub.news[data.page]
-    	}
+      }
+
+    post_feedback: (data) ->
+      @post {
+        url: '/api'
+        data
+        stub: (async) ->
+          async.resolve stub.feedback_success
+          # async.reject stub.feedback_fail
+      }
