@@ -5,7 +5,11 @@
     letter-spacing: -1px;
   }
   .b-feedback {
-    @include btn-style(150px, 40px);
+    width: 100%;
+    height: 400px;
+    &--btn {
+      @include btn-style(150px, 40px);
+    }
   }
   .b-icons {
     margin: 10px 0 0 20px;

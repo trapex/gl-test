@@ -1,37 +1,46 @@
-.index_page
-.b-news(data-js-news)
-.b-feedback(data-js-feedback) Обратная связь
-h2 Иконки CSS-спрайты
-.b-icons.b-icons__sprites
-  .b-icon
-    .b-icon--icon.b-icon--icon__photo
-    .b-icon--text 23 фото
-  .b-icon
-    .b-icon--icon.b-icon--icon__views
-    .b-icon--text 1232 просмотров
-  .b-icon
-    .b-icon--icon.b-icon--icon__favorite
-    .b-icon--text добавить в избранное
-h2 Иконочный шрифт
-.b-icons.b-icons__font
-  .b-icon
-    .b-icon--font-icon
-      i.fa.fa-camera.fa-lg
-    .b-icon--text 23 фото
-  .b-icon
-    .b-icon--font-icon
-      i.fa.fa-eye.fa-lg
-    .b-icon--text 1232 просмотров
-  .b-icon
-    .b-icon--font-icon
-      i.fa.fa-heart.fa-lg
-    .b-icon--text добавить в избранное
-h2 Иконки SVG
-.b-icons.b-icons__svg
-  .b-icon
-    svg#Layer_1.b-icon--svg-icon(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='30px', height='30px', viewbox='0 0 512 512', style='enable-background:new 0 0 512 512;', xml:space='preserve')
-      path#template(d='M340.8,98.4c50.7,0,91.9,41.3,91.9,92.3c0,26.2-10.9,49.8-28.3,66.6L256,407.1L105,254.6c-15.8-16.6-25.6-39.1-25.6-63.9\
-      c0-51,41.1-92.3,91.9-92.3c38.2,0,70.9,23.4,84.8,56.8C269.8,121.9,302.6,98.4,340.8,98.4 M340.8,83C307,83,276,98.8,256,124.8\
-      c-20-26-51-41.8-84.8-41.8C112.1,83,64,131.3,64,190.7c0,27.9,10.6,54.4,29.9,74.6L245.1,418l10.9,11l10.9-11l148.3-149.8\
-      c21-20.3,32.8-47.9,32.8-77.5C448,131.3,399.9,83,340.8,83L340.8,83z')
-    .b-icon--text добавить в избранное
+//- .b-menu(data-js-menu)
+//- .b-content
+section.b-news(data-js-news data-route='section1')
+section.b-feedback(data-route='section2') 
+  .b-feedback--btn(data-js-feedback) Обратная связь
+section(data-route='section3')
+  h2 Иконки CSS-спрайты
+  .b-icons.b-icons__sprites
+    .b-icon
+      .b-icon--icon.b-icon--icon__photo
+      .b-icon--text 23 фото
+    .b-icon
+      .b-icon--icon.b-icon--icon__views
+      .b-icon--text 1232 просмотров
+    .b-icon
+      .b-icon--icon.b-icon--icon__favorite
+      .b-icon--text добавить в избранное
+  h2 Иконочный шрифт
+  .b-icons.b-icons__font
+    .b-icon
+      .b-icon--font-icon
+        i.fa.fa-camera.fa-lg
+      .b-icon--text 23 фото
+    .b-icon
+      .b-icon--font-icon
+        i.fa.fa-eye.fa-lg
+      .b-icon--text 1232 просмотров
+    .b-icon
+      .b-icon--font-icon
+        i.fa.fa-heart.fa-lg
+      .b-icon--text добавить в избранное
+  h2 Иконки SVG
+  .b-icons.b-icons__svg
+    .b-icon
+      svg#Layer_1.b-icon--svg-icon(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='30px', height='30px', viewbox='0 0 512 512', style='enable-background:new 0 0 512 512;', xml:space='preserve')
+        path#template(d='M340.8,98.4c50.7,0,91.9,41.3,91.9,92.3c0,26.2-10.9,49.8-28.3,66.6L256,407.1L105,254.6c-15.8-16.6-25.6-39.1-25.6-63.9\
+        c0-51,41.1-92.3,91.9-92.3c38.2,0,70.9,23.4,84.8,56.8C269.8,121.9,302.6,98.4,340.8,98.4 M340.8,83C307,83,276,98.8,256,124.8\
+        c-20-26-51-41.8-84.8-41.8C112.1,83,64,131.3,64,190.7c0,27.9,10.6,54.4,29.9,74.6L245.1,418l10.9,11l10.9-11l148.3-149.8\
+        c21-20.3,32.8-47.9,32.8-77.5C448,131.3,399.9,83,340.8,83L340.8,83z')
+      .b-icon--text добавить в избранное
+//- section(data-js-route='section4')
+//-   h2 Блок навигации
+//- section(data-js-route='section5')
+//-   h2 Адаптация под мобильные
+//- section(data-js-route='section6 ')
+//-   h2 Оптимизация

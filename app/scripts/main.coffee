@@ -33,7 +33,8 @@ require.config
     'bootstrap/transition': "#{VENDOR_PATH}/bootstrap-sass-official/assets/javascripts/bootstrap/transition"
     backboneValidation: "#{VENDOR_PATH}/backbone.validation/dist/backbone-validation-amd"
     jqueryMaskedinput: "#{VENDOR_PATH}/jquery.maskedinput/src/jquery.maskedinput"
-
+    jqueryStellar: "#{VENDOR_PATH}/jquery.stellar/jquery.stellar"
+    'jquery-mousewheel': "#{VENDOR_PATH}/jquery-mousewheel/jquery.mousewheel"
   packages: [
     'view/layout'
     'view/widget'

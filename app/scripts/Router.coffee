@@ -29,11 +29,15 @@ define [
 
     routes:
       '': 'index'
+      'index': 'index'
+      'index/:section': 'index'
       '404': 'error404'
       '*default': 'default_router'
 
-    index: middleware.wrap ->
+    index: middleware.wrap (section) ->
       view = showPage Page.IndexPage
+      # view.route section.split('=')[1]
+      view.route section
 
     error404: middleware.wrap ->
       showPage Page.Error404Page

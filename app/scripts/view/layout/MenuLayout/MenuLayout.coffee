@@ -5,3 +5,12 @@ define (require, exports, module)->
     template: '#MenuLayout'
     
     className: 'menu_layout'
+
+    ui:
+      href: '[data-js-href]'
+
+    events:
+      'click @ui.href': 'onClickMenu'
+
+    onClickMenu: ->
+

@@ -83,6 +83,7 @@ define (require, exports, module)->
       common.sblocks.init $('body')
       layout = {}
       layout.header   = new Layout.HeaderLayout   el: '#header-layout'
+      layout.menu  = new Layout.MenuLayout  el: '#menu-layout'
       layout.content  = new Layout.ContentLayout  el: '#content-layout'
       layout.footer   = new Layout.FooterLayout   el: '#footer-layout'
       layout.modal    = new Layout.ModalLayout    el: '#modal-layout'
