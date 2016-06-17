@@ -7,4 +7,41 @@
   .b-feedback {
     @include btn-style(150px, 40px);
   }
+  .b-icons {
+    margin: 10px 0 0 20px;
+  }
+  .b-icon {
+    display: inline-block;
+    margin: 0 10px;
+    &--icon {
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      &__photo {
+        background-image: url(../images/sprites/icons.jpg);
+        background-position: 183px 399px;
+      }
+      &__views {
+        background-image: url(../images/sprites/icons.jpg);
+        background-position: 152px 338px;
+      }
+      &__favorite {
+        background-image: url(../images/sprites/icons.jpg);
+        background-position: 183px 491px;
+      }
+    }
+    &--font-icon,
+    &--svg-icon {
+      display: inline-block;
+      vertical-align: middle;
+      color: $c-gray;
+    }
+    &--text {
+      color: $c-gray;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
 }

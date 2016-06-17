@@ -21,7 +21,8 @@
     "fontawesome": "~4.2.0",
     "reset-css": "*",
     "backbone.validation": "backbone-validation#^0.11.5",
-    "jquery.maskedinput": "^1.4.1"
+    "jquery.maskedinput": "^1.4.1",
+    "font-awesome": "font-awsome#^4.6.3"
   },
   "resolutions": {
     "jquery": "~1.11.1"
