@@ -54,7 +54,6 @@ define (require, exports, module)->
       @ui.phone.mask '+7 (999) 999 9999'
 
     showModal: ->
-      #You code here
       $(window).scrollTop(0)
       _Modal::showModal.apply this, arguments
 

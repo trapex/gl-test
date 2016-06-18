@@ -6,11 +6,4 @@ define (require, exports, module)->
     
     className: 'menu_layout'
 
-    ui:
-      href: '[data-js-href]'
-
-    events:
-      'click @ui.href': 'onClickMenu'
-
-    onClickMenu: ->
 
