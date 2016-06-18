@@ -5,4 +5,15 @@
 			display: none;
 		}
 	}
+  @media #{$mq-width-mobile} {
+    .b-news--list {
+      position: relative;
+      width: 100%;
+    }
+    .b-news--more-btn {
+      @include btn-style(15rem, 4rem);
+      margin: 0 auto;
+      font-size: 1.5rem;
+    }
+  }
 }

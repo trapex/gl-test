@@ -32,4 +32,10 @@
       }
     }
   }
+  @media #{$mq-width-tablet} {
+    display: none;
+  }
+  @media #{$mq-width-mobile} {
+    display: none;
+  }
 }

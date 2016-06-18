@@ -13,5 +13,6 @@ define (require, exports, module)->
       #You code here
 
     showModal: (data) ->
+      $('html').scrollTop(0)
       @ui.text.text data
       _Modal::showModal.apply this, arguments

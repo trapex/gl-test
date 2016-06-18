@@ -64,4 +64,34 @@
       cursor: default;
     }
   }
+  @media #{$mq-width-mobile} {
+    .b-feedback-form {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .b-el {
+      margin: 1rem 0;
+      &--text {
+        width: 85%;
+        display: block;
+      }
+      &--input {
+        width: 85%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .b-area {
+      &--area {
+        width: 85%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .b-feedback-send {
+      @include btn-style(15rem, 4rem);
+      margin: 2rem auto;
+      font-size: 1.5rem;
+    }
+  }
 }

@@ -1,6 +1,12 @@
 $c-gray: #757575;
 $c-main: #292929;
 $c-red: #ff0000; 
+
+$mq-width-portrait-mobile: "screen and (max-width: 640px) and (orientation: portrait)";
+$mq-width-landscape-mobile: "screen and (max-width: 640px) and (orientation: landscape)";
+$mq-width-mobile: "screen and (max-width: 640px)";
+$mq-width-tablet: "screen and (max-width: 1020px)";
+
 html {
 	position: relative;
 	width: 100%;
@@ -30,3 +36,59 @@ h2 {
   color: $c-main;
   margin-left: 30px;
 }
+.b-text {
+  font-family: Arimo;
+  font-size: 15px;
+  color: $c-main;
+  margin: 20px 30px;
+  p {
+    margin: 10px 0;
+  }
+  ol {
+    margin-left: 30px;
+    list-style-type: decimal;
+    li {
+      margin: 5px 0;
+    }
+  }
+}
+
+@media #{$mq-width-mobile} {
+  body {
+    width: 100%;
+  }
+  body.modal-open.modal-open {
+    overflow-y: auto
+  }
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .b-text {
+    font-size: 1.2rem;
+    p {
+      margin: 1rem 0;
+    }
+    ol {
+      margin-left: 2rem;
+      li {
+        margin: 0.3rem;
+      }
+    }
+  }
+}
+
+@media #{$mq-width-landscape-mobile} {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media #{$mq-width-portrait-mobile} {
+  html {
+    font-size: 10px;
+  }
+}
+  

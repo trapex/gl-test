@@ -55,6 +55,7 @@ define (require, exports, module)->
 
     showModal: ->
       #You code here
+      $(window).scrollTop(0)
       _Modal::showModal.apply this, arguments
 
     checkValidation: ->
